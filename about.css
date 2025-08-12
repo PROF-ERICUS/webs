@@ -1,0 +1,234 @@
+/* ========================
+   Global Styles & Variables
+======================== */
+:root {
+  --bg-color: #f5f7fa;
+  --text-color: #111111;
+  --accent-color: #0077ff;
+  --accent-hover: #005fcc;
+  --dark-bg: #121212;
+  --dark-text: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--dark-text);
+}
+
+/* ========================
+   Header
+======================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent-color);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cv-btn {
+  padding: 8px 14px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.cv-btn:hover {
+  background: var(--accent-hover);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* ========================
+   Mobile Menu
+======================== */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-color);
+    display: none;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ========================
+   About Section
+======================== */
+.about {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 250px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+
+
+/* ========================
+   Footer
+======================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+}
+
+/* ========================
+   Responsive Tweaks
+======================== */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .cv-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .about h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-content {
+    gap: 20px;
+  }
+}
