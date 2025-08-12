@@ -36,7 +36,8 @@
 
     </div>
   </main>
-  <!-- Overlay -->
+ 
+<!-- Overlay -->
 <div class="overlay"></div>
 
 <!-- Side Menu -->
@@ -49,14 +50,14 @@
     <div class="menu-section">
         <button class="dropdown-btn">Home ▼</button>
         <div class="dropdown-content">
-            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
             <a href="project.html">Project</a>
             <a href="cv.html">Cv</a>
         </div>
     </div>
 
     <div class="menu-section">
-        <button class="dropdown-btn">Skills▼</button>
+        <button class="dropdown-btn">Skills ▼</button>
         <div class="dropdown-content">
             <a href="#">SEO</a>
             <a href="#">Content Marketing</a>
@@ -88,12 +89,13 @@
     <a href="contact.html" class="contact-link">Contact us</a>
   </div>
 
-  <!-- Footer -->
-  <footer>
-     © <span id="year"></span> ericusvaulthub. All Rights Reserved. 
-  </footer>
-
-  <!-- Script -->
+  <div class="copyright">
+    © <span id="year"></span> ericusvaulthub. All Rights Reserved. 
+  </div>
+</footer>
   <script src="project.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
