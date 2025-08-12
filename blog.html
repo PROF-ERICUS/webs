@@ -12,6 +12,9 @@
       background-color: #f8f9fa;
       color: #333;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       background-color: #0d6efd;
@@ -21,27 +24,31 @@
     }
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       background-color: #343a40;
       padding: 10px 0;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 5px 15px;
       text-decoration: none;
     }
     nav a:hover {
       text-decoration: underline;
     }
     main {
-      max-width: 900px;
+      flex: 1;
+      max-width: 1200px;
       margin: 20px auto;
       padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
     article {
       background: white;
       padding: 20px;
-      margin-bottom: 20px;
       border-radius: 6px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
@@ -54,6 +61,18 @@
       color: white;
       padding: 15px;
       font-size: 14px;
+    }
+    /* Tablet */
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    /* Desktop */
+    @media (min-width: 1024px) {
+      main {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   </style>
 </head>
@@ -70,7 +89,7 @@
     <a href="https://www.reuters.com" target="_blank">Reuters</a>
     <a href="https://www.aljazeera.com" target="_blank">Al Jazeera</a>
     <a href="https://www.nytimes.com" target="_blank">New York Times</a>
-     <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
   </nav>
 
   <main>
@@ -83,10 +102,15 @@
       <h2>🌐 Featured Update</h2>
       <p>Major news outlets report significant developments in global politics, economics, and technology. Visit the linked sources above to read the latest verified stories as they unfold in real time.</p>
     </article>
+
+    <article>
+      <h2>📈 Trending Now</h2>
+      <p>Get the hottest updates on technology innovations, market trends, and cultural shifts shaping the future.</p>
+    </article>
   </main>
 
   <footer>
-     © <span id="year"></span> ericusvaulthub. All Rights Reserved.  | Powered by Reliable Sources</p>
+     © <span id="year"></span> ericusvaulthub. All Rights Reserved. | Powered by Reliable Sources
   </footer>
 
   <script>
