@@ -10,9 +10,13 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
-  z-index: -1; /* behind all content */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* fit without cropping */
+  background: black;
+  z-index: -1;
 }
+
 
 /* Header */
 .header {
@@ -219,6 +223,7 @@ copyright {
     font-size: 13px;
   }
 }
+
 
 
 
