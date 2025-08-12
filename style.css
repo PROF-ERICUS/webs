@@ -6,15 +6,16 @@ body {
 }
 #bg-video {
   position: fixed;
-  top: 70px;          /* Below the header */
-  bottom: 80px;       /* Above the footer */
+  top: 70px;       /* height of your fixed header */
+  bottom: 40px;    /* height of your fixed footer */
   left: 0;
   right: 0;
-  width: 100%;
-  height: auto; /* Let height adjust to container */
-  object-fit: cover; /* Cover the area without distortion */
-  z-index: -1;   /* Behind all content */
+  width: 100vw;
+  height: calc(100vh - 110px); /* total viewport height minus header + footer */
+  object-fit: cover;
+  z-index: -1;
 }
+
 
 
 /* Header */
@@ -222,6 +223,7 @@ copyright {
     font-size: 13px;
   }
 }
+
 
 
 
