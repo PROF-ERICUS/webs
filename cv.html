@@ -9,9 +9,11 @@
       font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 20px 30px;
       color: #333;
       background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
 
     header {
@@ -32,7 +34,7 @@
     }
 
     section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     h2 {
@@ -72,22 +74,40 @@
       font-size: 1rem;
     }
 
-   a.download-link {
-  color: #007bff;
-  text-decoration: none; /* Remove underline */
-  font-weight: 600;
-}
+    a.download-link {
+      color: #007bff;
+      text-decoration: none; /* Remove underline */
+      font-weight: 600;
+    }
 
-a.download-link:hover {
-  color: #0056b3;
-  text-decoration: underline; /* Optional: underline on hover for feedback */
-}
+    a.download-link:hover {
+      color: #0056b3;
+      text-decoration: underline; /* Underline on hover */
+    }
 
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+    }
 
     @media (max-width: 600px) {
       body {
         margin: 20px 10px;
-        padding: 0 10px;
+        padding: 15px 15px;
       }
 
       header h1 {
@@ -103,43 +123,43 @@ a.download-link:hover {
   </header>
 
   <div class="contact-info">
-    <p>Email: <a href="ericandoh005@gmail.com">ericandoh005@gmail</a> | Phone: +123 456 7890</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/ericandoh" target="_blank">linkedin.com/in/ericandoh</a></p>
-    <p>GitHub: <a href="https://github.com/ericandoh" target="_blank">github.com/ericandoh</a></p>
+    <p>Email: <a href="mailto:ericandoh005@gmail.com">ericandoh005@gmail.com</a> | Phone: 0542044490</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/eric-andoh-49ab01335" target="_blank" rel="noopener noreferrer">linkedin.com/in/ericandoh</a></p>
+    <p>GitHub: <a href="https://github.com/PROF-ERICUS" target="_blank" rel="noopener noreferrer">github.com/ericandoh</a></p>
   </div>
 
   <section>
     <h2>Download CV</h2>
     <p>
       <a href="cv/Eric_Andoh_CV.pdf" download target="_blank" class="download-link">
-  📄 Download my CV (PDF)
-</a>
-
+        📄 Download my CV (PDF)
+      </a>
     </p>
   </section>
 
   <section>
     <h2>Profile</h2>
-    <p>A passionate IT student and developer with experience in building web applications and solving technical problems. Skilled in JavaScript, HTML, CSS, and software development methodologies.</p>
+    <p>
+      A passionate IT student and developer with experience in building web applications and solving technical problems. Skilled in JavaScript, HTML, CSS, and software development methodologies.
+    </p>
   </section>
-
 
   <section>
     <h2>Skills</h2>
     <ul>
-      <li>JavaScript, HTML5, CSS3</li>
-      <li>React.js & basic Node.js</li>
-      <li>Version Control (Git & GitHub)</li>
-      <li>Problem-solving and debugging</li>
-      <li>Basic database knowledge (MySQL)</li>
+      <li>•	Programming: HTML, CSS, JavaScript</li>
+      <li>•	Soft Skills: Communication, Teamwork, Time Management, Troubleshooting</li>
+      <li>•	Design & Tools: VS Code, Git, Draw.io, Adobe Creative Cloud</li>
+      <li>•	Other Skills: UI/UX Design, Social Media Graphics, Problem Solving</li>
+      <li>•	House/ Home Installation</li>
     </ul>
   </section>
 
   <section>
     <h2>Projects</h2>
     <ul>
-      <li><strong>Multi-School GPA Calculator:</strong> A web app that calculates GPA & CGPA for different universities.</li>
-      <li><strong>QR Attendance System:</strong> Developed a QR code based attendance system with face recognition.</li>
+      <li><strong>Multi-School GPA Calculator:</strong> Built a responsive web app using JavaScript that calculates GPA & CGPA for various university grading systems, improving student grade tracking accuracy.</li>
+      <li><strong>QR Attendance System:</strong> A QR code-based university attendance system with data persistence, student login, and CSV report generation</li>
     </ul>
   </section>
 
@@ -150,5 +170,14 @@ a.download-link:hover {
       <li>Twi - Native</li>
     </ul>
   </section>
+
+  <footer>
+    &copy; <span id="year"></span> Eric Andoh. All rights reserved.
+  </footer>
+
+  <script>
+    // Set current year in the footer automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
