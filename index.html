@@ -8,11 +8,28 @@
 </head>
 <body>
 
- <!-- Background Video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="vidoes/video 1.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+<video autoplay muted loop id="bg-video" playsinline>
+  <source src="vidoes/video 1.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<script>
+  const video = document.getElementById('bg-video');
+  const loopStartTime = 10;  // start looping from 10 seconds
+  const loopEndTime = 40;    // end looping at 40 seconds
+
+  video.addEventListener('loadedmetadata', () => {
+    video.currentTime = loopStartTime;  // start from 10 seconds
+    video.play();
+  });
+
+  video.addEventListener('timeupdate', () => {
+    if (video.currentTime >= loopEndTime) {
+      video.currentTime = loopStartTime;
+      video.play();
+    }
+  });
+</script>
 
   <header class="header">
       <img src="images/Logo vault.png" alt="Logo" />
@@ -92,5 +109,6 @@
 </script>
 
 </html>
+
 
 
