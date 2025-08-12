@@ -4,6 +4,15 @@ body {
     background-color: #f5f5f5;
      padding-bottom: 80px; /* adjust to footer height */
 }
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* behind all content */
+}
 
 /* Header */
 .header {
@@ -210,5 +219,6 @@ copyright {
     font-size: 13px;
   }
 }
+
 
 
