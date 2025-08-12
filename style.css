@@ -6,15 +6,24 @@ body {
 }
 #bg-video {
   position: fixed;
-  top: 70px;       /* height of your fixed header */
-  bottom: 40px;    /* height of your fixed footer */
+  top: 70px; /* header height */
+  bottom: 40px; /* footer height */
   left: 0;
   right: 0;
-  width: 100vw;
-  height: calc(100vh - 110px); /* total viewport height minus header + footer */
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 110px); /* full available height */
   object-fit: cover;
   z-index: -1;
 }
+@media (max-width: 768px) {
+  #bg-video {
+    width: 100vw;
+    height: calc(100vh - 110px);
+    min-height: auto;
+  }
+}
+
 
 
 
@@ -223,6 +232,7 @@ copyright {
     font-size: 13px;
   }
 }
+
 
 
 
