@@ -198,6 +198,10 @@ body {
     font-size: 13px;
   }
 }
+copyright {
+  font-size: 13px;
+  color: #ccc;
+}
 /* ===========================
    CONTACT PAGE STYLING
 =========================== */
@@ -367,4 +371,3 @@ body {
 .contact-link:hover {
   color: #0056b3;
 }
-
