@@ -5,7 +5,18 @@ body {
      padding-bottom: 80px; /* adjust to footer height */
      
 }
-
+#bg-video {
+  position: fixed;
+  top: 70px; /* header height */
+  bottom: 40px; /* footer height */
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 110px); /* full available height */
+  object-fit: cover;
+  z-index: -1;
+}
 @media (max-width: 768px) {
   #bg-video {
     width: 100vw;
@@ -128,44 +139,22 @@ body {
     width: 90px;
     height: auto;
 }
-
-/* ===== Content ===== */
-.content {
-  flex: 1;
-  padding: 50px 8%;
-  max-width: 1200px;
-  margin: 0 auto;
+.main-content {
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
 }
 
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  font-weight: 700;
-  color: #2c3e50;
-}
-
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.project {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-}
-
-.project h3 {
-  color: #0077cc;
-  font-size: 1.2rem;
+.main-content h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: #555;
 }
 
 .open-menu-btn {
@@ -241,6 +230,45 @@ copyright {
   .footer {
     font-size: 13px;
   }
+}
+
+/* ===== Content ===== */
+.content {
+  flex: 1;
+  padding: 50px 8%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  color: #0077cc;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 /* ===== Live Demo Button ===== */
 .btn {
