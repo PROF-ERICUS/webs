@@ -187,6 +187,17 @@ body {
 .footer-nav a:hover {
   color: #007bff;
 }
+/* Responsive for smaller screens */
+@media (max-width: 480px) {
+  .footer-nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  
+  .footer {
+    font-size: 13px;
+  }
+}
 /* ===========================
    CONTACT PAGE STYLING
 =========================== */
@@ -356,3 +367,4 @@ body {
 .contact-link:hover {
   color: #0056b3;
 }
+
